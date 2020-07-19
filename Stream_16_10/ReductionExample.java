@@ -2,7 +2,6 @@ package thisIsJava.Stream_16_10;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.BinaryOperator;
 
 public class ReductionExample {
     public static void main(String[] args) {
@@ -17,12 +16,12 @@ public class ReductionExample {
                 .sum();
         int sum2 = studentList.stream()
                 .map(Student::getScore)
-                .reduce((a, b) -> a + b)
+                .reduce(Integer::sum)
                 .get();
 
         int sum3 = studentList.stream()
                 .map(Student::getScore)
-                .reduce(0, (a, b) -> a + b);
+                .reduce(0, Integer::sum);
 
         System.out.println("sum1: " + sum1);
         System.out.println("sum2: " + sum2);

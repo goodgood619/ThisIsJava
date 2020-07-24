@@ -21,7 +21,7 @@ public class UdpSendExample {
             datagramSocket.send(packet);
             System.out.println("[보낸 바이트 수 ]: "+byteArr.length+"  bytes");
         }
-        System.out.println("[발신 종료ㅛ]");
+        System.out.println("[발신 종료]");
         datagramSocket.close();
     }
 }
